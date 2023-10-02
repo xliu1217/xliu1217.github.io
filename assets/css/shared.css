@@ -1,0 +1,36 @@
+/* Navigation CSS */
+.navigation {
+    background: #ebfaff;  /* using linear-gradient as background */
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* subtle shadow for depth */
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;  /* centering the ul */
+}
+
+.navigation li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;  /* text color to a dark shade for better contrast with light background */
+    padding: 8px 16px;  /* added padding for better click area and visual appeal */
+    border-radius: 5px;  /* rounded edges */
+    transition: background-color 0.3s;  /* smooth transition for hover effects */
+}
+
+.navigation a:hover {
+    background-color: rgba(0, 0, 0, 0.1);  /* subtle hover effect */
+}
+
+.navigation .nav-name {
+    font-size: 1.2em;  /* slightly bigger font for the name */
+    font-weight: bold;
+}

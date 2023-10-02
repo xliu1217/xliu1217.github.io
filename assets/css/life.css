@@ -1,0 +1,61 @@
+/* ... other styles ... */
+
+@import url("/assets/css/shared.css");
+
+
+/* Row containing two photos */
+.photo-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo-item {
+    flex-basis: calc(50% - 2%); /* Adjust the percentage for space between the photos */
+    margin-bottom: 2%; 
+}
+
+
+
+/* Specific margins for left and right photos */
+.photo-row .photo-item:first-child {
+    margin-right: 10px;
+}
+.photo-row .photo-item:last-child {
+    margin-left: 10px;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.photo-item p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* New styles */
+.left {
+    margin-right: 2%; /* Adjust for spacing between left and right photos */
+}
+
+.right {
+    margin-left: 2%; /* Adjust for spacing between right and left photos */
+}
+
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    .photo-item {
+        flex-basis: 100%;  /* Ensuring each photo takes the full width on smaller screens */
+        margin-bottom: 10px;   /* Adjust margin as per your design needs */
+        padding: 5px 0;
+    }
+}
+
+

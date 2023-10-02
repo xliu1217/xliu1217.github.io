@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Site's Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared.css">
+
+    <!-- Open Sans Font Link -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 150%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .venn-container {
+            margin-left: auto;
+            /* This allows the content to move as far to the right as it can within its containing element */
+            margin-right: -200px;
+            /* A small margin from the right to ensure it's not directly touching the border */
+        }
+
+        .venn-diagram {
+            display: block;
+            margin: 0 auto;
+            /* This centers it within the venn-container */
+        }
+        .life-photos {
+    width: 100%;
+}
+
+
+        .news-container {
+            /* Set a maximum height for the news container */
+            max-height: calc(100vh - 20px); /* Adjust as needed */
+            overflow-y: auto;
+            border-right: 1px solid #ccc;
+            /* optional: to distinguish the scrollbar visually */
+        }
+
+       
+
+        /* Two-column Layout CSS */
+        .container {
+            display: flex;
+            flex-direction: row;
+            /* Explicitly set to row */
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            /* Prevent wrapping */
+        }
+
+        .left-column {
+            width: 25%;
+            min-width: 200px;
+            /* Minimum width before it tries to shrink further */
+            box-sizing: border-box;
+            padding: 10px;
+            overflow-wrap: break-word;
+            margin-left: 120px;
+            display: flex;
+            flex-direction: column;
+        }
+
+       
+
+        .right-column {
+            width: 60%;
+            min-width: 300px;
+            /* Minimum width before it tries to shrink further */
+            box-sizing: border-box;
+            padding: 10px;
+            overflow-wrap: break-word;
+            margin-right: 110px;
+            text-align: justify;
+            /* This line ensures that text is justified */
+        }
+
+        h1,
+        h2 {
+            display: block;
+            margin-top: 0.5em;
+            /* Add space above the headings */
+            margin-bottom: 0.5em;
+            /* Add space below the headings */
+            clear: both;
+            /* Clear floated content */
+        }
+
+        /* Responsive Breakpoint for smaller screens */
+        @media (max-width: 768px) {
+
+            .left-column,
+            .right-column {
+                width: 100%;
+                min-width: 0;
+                /* Reset min-width for small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <nav>
+            <ul>
+                <li><a href="/" class="nav-name">Xinyi Liu</a></li>
+                <li><a href="life.html"><strong>Life</strong></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="left-column">
+            <!-- News content will be injected here -->
+            {% include news.html %}
+        </div>
+
+        <div class="right-column">
+            <!-- About Me content will be injected here -->
+            {% include about-me.html %}
+        </div>
+    </div>
+
+    <!-- You can add other elements or scripts below if you have them -->
+
+</body>
+
+</html>
