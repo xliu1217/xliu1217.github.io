@@ -13,10 +13,16 @@
         /* Global Styles */
         body {
             font-family: 'Open Sans', sans-serif;
-            font-size: 150%;
+            font-size: 14px;
             margin: 0;
             padding: 0;
         }
+
+        #news-section {
+        overflow-y: auto;
+        border-right: 1px solid #ccc;
+    }
+
 
         .venn-container {
             margin-left: auto;
@@ -35,13 +41,16 @@
 }
 
 
-        .news-container {
-            /* Set a maximum height for the news container */
-            max-height: calc(100vh - 20px); /* Adjust as needed */
-            overflow-y: auto;
-            border-right: 1px solid #ccc;
-            /* optional: to distinguish the scrollbar visually */
-        }
+
+.news-container {
+    background-color: red;
+}
+
+.about-me-container {
+    background-color: blue; /* This is just for visualization */
+}
+
+
 
        
 
@@ -52,6 +61,7 @@
             /* Explicitly set to row */
             justify-content: space-between;
             flex-wrap: nowrap;
+            align-items: flex-start;
             /* Prevent wrapping */
         }
 
@@ -65,6 +75,7 @@
             margin-left: 120px;
             display: flex;
             flex-direction: column;
+            overflow-y: hidden;  /* This line will hide the vertical scrollbar */
         }
 
        
@@ -94,14 +105,16 @@
 
         /* Responsive Breakpoint for smaller screens */
         @media (max-width: 768px) {
+    .left-column, .right-column {
+        width: 100%;
+        min-width: 0; /* Reset min-width for small screens */
+        order: 1; /* This is optional if they are already in order in your HTML, but just in case */
+    }
+    .right-column {
+        order: 2;
+    }
+}
 
-            .left-column,
-            .right-column {
-                width: 100%;
-                min-width: 0;
-                /* Reset min-width for small screens */
-            }
-        }
     </style>
 </head>
 
